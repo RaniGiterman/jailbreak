@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #ccc;
+}
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 800px;
+}
+
+#status {
+    color: rgb(35, 206, 35);
+    text-align: center;
+    background-color: black;
+    padding: 8px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+    border-radius: 9999px;
+    display: none;
+}
