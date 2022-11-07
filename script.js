@@ -26,7 +26,7 @@ let app = new PIXI.Application({
 document.getElementById("game").appendChild(app.view);
 
 // creating player
-let player = new PIXI.Sprite.from(PIXI.Texture.WHITE);
+let player = new PIXI.Sprite(PIXI.Texture.WHITE);
 player.width = 80;
 player.height = 10;
 player.tint = 0xde3249;
@@ -36,7 +36,7 @@ player.y = APP_HEIGHT - player.height - 10;
 app.stage.addChild(player);
 
 // creating ball
-let ball = new PIXI.Sprite.from(PIXI.Texture.WHITE);
+let ball = new PIXI.Sprite(PIXI.Texture.WHITE);
 ball.tint = 0xffffff;
 ball.width = 15;
 ball.height = 15;
@@ -62,7 +62,7 @@ for (let j = 0; j < TARGET_AMOUNT; j++) {
   }
   let str = `0x${rgbToHex(picked_color.r, picked_color.g, picked_color.b)}`;
 
-  let target = new PIXI.Sprite.from(PIXI.Texture.WHITE);
+  let target = new PIXI.Sprite(PIXI.Texture.WHITE);
   target.tint = str;
   target.width = TARGET_WIDTH;
   target.height = TARGET_HEIGHT;
@@ -258,7 +258,7 @@ function handleBallHitTarget(target, i) {
   let spawnY = target.y + TARGET_HEIGHT / 2 - PARTICLE_HEIGHT / 2;
 
   for (let i = 0; i < PARTICLE_AMOUNT; i++) {
-    let particle = new PIXI.Sprite.from(PIXI.Texture.WHITE);
+    let particle = new PIXI.Sprite(PIXI.Texture.WHITE);
     particle.tint = target.str;
     particle.width = PARTICLE_WIDTH;
     particle.height = PARTICLE_HEIGHT;
